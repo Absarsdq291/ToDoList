@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todolist.ToDoListController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="868.0" styleClass="toppanel" stylesheets="@todolist.css" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ToDo">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="578.0" prefWidth="237.0" styleClass="mainFxmlClass" stylesheets="@todolist.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="descriptionTextField" promptText="EVENT DESCRIPTION">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin></TextField>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addEvent" stylesheets="@todolist.css" text="Add Task" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" styleClass="add-button">
+                     <image>
+                        <Image url="@../add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="add-button" />
+                  <String fx:value="add-button:hover" />
+               </styleClass>
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeEvent" styleClass="remove-button" stylesheets="@todolist.css" text=" Remove Task" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateEvent" styleClass="update-button" stylesheets="@todolist.css" text="Edit Task" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveListViewDataToFile" styleClass="save-button" stylesheets="@todolist.css" text="Save" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="97.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="OpenButton" mnemonicParsing="false" onAction="#openEvent" prefHeight="72.0" prefWidth="141.0" styleClass="update-button" stylesheets="@todolist.css" text="   Open" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../open.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="eventList" editable="true" layoutX="12.0" layoutY="11.0" prefHeight="555.0" prefWidth="606.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

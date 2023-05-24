@@ -1,0 +1,51 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #36393F;
+}
+
+.toppanel{
+    -fx-background-color: #2B2E32;
+}
+
+.add-button {
+    -fx-background-color: #36393F; /* Background color */
+}
+
+.add-button:hover {
+    -fx-background-color: #388E3C; /* Darker background color on hover */
+}
+
+.remove-button{
+    -fx-background-color: #36393F;
+}
+
+.remove-button:hover{
+    -fx-background-color: #8B0000;
+}
+
+.update-button{
+    -fx-background-color: #36393F;
+}
+
+.update-button:hover{
+    -fx-background-color: #2B2E32;
+}
+
+.save-button{
+    -fx-background-color: #36393F;
+}
+
+.save-button:hover{
+    -fx-background-color: #2B2E32;
+}
+
+.update-button{
+    -fx-background-color: #36393F;
+}
+
+.update-button:hover{
+    -fx-background-color: #2B2E32;
+}
